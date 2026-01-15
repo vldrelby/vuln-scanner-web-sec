@@ -1,0 +1,121 @@
+# Vulnerability Scanner Configuration
+
+# Scanner settings
+scanner:
+  # Timeout for HTTP requests (seconds)
+  request_timeout: 30
+  # Maximum concurrent requests
+  max_concurrent: 10
+  # User agent for requests
+  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+
+# Nmap settings
+nmap:
+  # Default scan type: syn (requires root), connect (no root needed), udp, etc.
+  # Use "connect" for Docker containers without root privileges
+  scan_type: "connect"
+  # Ports to scan (common ports: 80,443,8080,8443)
+  ports: "80,443,8080,8443,3000,5000,22,21,25,53,3306,5432,6379,27017"
+  # Scan arguments (don't include scan type flag here, it's added automatically)
+  # Using faster timing (-T4), version detection (-sV), and scripts
+  # Added http-* scripts for web services and vuln scripts for vulnerabilities
+  # Explicitly include vulners script for CVE detection
+  # Increased host-timeout to allow scripts to complete
+  arguments: "-T4 -sV --script http-enum,http-headers,http-methods,http-security-headers,http-server-header,http-title,vuln,vulners --max-retries 1 --host-timeout 180s --script-timeout 30s"
+
+# Nuclei settings
+nuclei:
+  # Path to Nuclei binary (if not in PATH)
+  binary_path: "nuclei"
+  # Templates directory
+  templates_path: "./nuclei-templates"
+  # Severity levels to include: info, low, medium, high, critical
+  # Include medium for better coverage while still being fast
+  severity: ["medium", "high", "critical"]
+  # Rate limit (requests per second) - balanced for speed and stability
+  rate_limit: 100
+
+# Custom scanner settings
+custom_scanner:
+  # Directories to check for open directory listing
+  common_directories:
+    - "/admin"
+    - "/backup"
+    - "/config"
+    - "/database"
+    - "/logs"
+    - "/test"
+    - "/tmp"
+    - "/uploads"
+    - "/.git"
+    - "/.env"
+  
+  # XSS payloads to test
+  xss_payloads:
+    - "<script>alert('XSS')</script>"
+    - "<img src=x onerror=alert('XSS')>"
+    - "<svg onload=alert('XSS')>"
+    - "javascript:alert('XSS')"
+    - "<iframe src=javascript:alert('XSS')>"
+    - "'\"><script>alert(String.fromCharCode(88,83,83))</script>"
+    - "<body onload=alert('XSS')>"
+    - "<input onfocus=alert('XSS') autofocus>"
+  
+  # Sensitive files to check
+  sensitive_files:
+    - "/.env"
+    - "/.env.local"
+    - "/.env.production"
+    - "/.git/config"
+    - "/.git/HEAD"
+    - "/.gitignore"
+    - "/.htaccess"
+    - "/web.config"
+    - "/backup.sql"
+    - "/database.sql"
+    - "/dump.sql"
+    - "/config.php"
+    - "/config.json"
+    - "/.DS_Store"
+    - "/composer.json"
+    - "/package.json"
+    - "/.idea/workspace.xml"
+  
+  # SQL injection payloads
+  sqli_payloads:
+    - "' OR '1'='1"
+    - "' OR '1'='1' --"
+    - "' UNION SELECT NULL--"
+    - "1' AND '1'='1"
+    - "admin'--"
+    - "' OR 1=1#"
+  
+  # Security headers to check
+  security_headers:
+    - "X-Frame-Options"
+    - "X-Content-Type-Options"
+    - "X-XSS-Protection"
+    - "Strict-Transport-Security"
+    - "Content-Security-Policy"
+    - "Referrer-Policy"
+    - "Permissions-Policy"
+
+# Database settings
+database:
+  # SQLite database path
+  path: "./scanner.db"
+
+# Logging settings
+logging:
+  level: "INFO"
+  file: "./scanner.log"
+  rotation: "10 MB"
+  retention: "7 days"
+
+# Test targets (for demonstration)
+test_targets:
+  - url: "http://testphp.vulnweb.com"
+    description: "Acunetix Web Vulnerability Test Site"
+  - url: "http://testfire.net"
+    description: "Altoro Mutual Test Site"
+

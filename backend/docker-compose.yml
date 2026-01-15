@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  scanner-api:
+    build: .
+    container_name: web-sec-scanner
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./scanner.db:/app/scanner.db
+      - ./config.yaml:/app/config.yaml
+    environment:
+      - API_HOST=0.0.0.0
+      - API_PORT=8000
+      - DATABASE_PATH=./scanner.db
+      - LOG_LEVEL=INFO
+    restart: unless-stopped
+    networks:
+      - scanner-network
+
+networks:
+  scanner-network:
+    driver: bridge
+

@@ -1,0 +1,287 @@
+{
+  "scans": [
+    {
+      "target_url": "https://example.com",
+      "scan_type": "custom",
+      "status": "completed",
+      "started_at": "2026-01-14T13:07:15.252Z",
+      "id": 1,
+      "created_at": "2026-01-14T13:07:15.252Z",
+      "completed_at": "2026-01-14T13:07:17.974Z"
+    },
+    {
+      "target_url": "https://example.com",
+      "scan_type": "custom",
+      "status": "completed",
+      "started_at": "2026-01-14T13:09:04.170Z",
+      "id": 2,
+      "created_at": "2026-01-14T13:09:04.244Z",
+      "completed_at": "2026-01-14T13:09:06.159Z"
+    },
+    {
+      "target_url": "https://example.com",
+      "scan_type": "custom",
+      "status": "completed",
+      "started_at": "2026-01-14T13:10:31.637Z",
+      "id": 3,
+      "created_at": "2026-01-14T13:10:31.666Z",
+      "completed_at": "2026-01-14T13:10:34.070Z"
+    },
+    {
+      "target_url": "https://example.com",
+      "scan_type": "custom",
+      "status": "completed",
+      "started_at": "2026-01-14T13:12:35.478Z",
+      "id": 4,
+      "created_at": "2026-01-14T13:12:35.479Z",
+      "completed_at": "2026-01-14T13:12:37.821Z"
+    },
+    {
+      "target_url": "https://example.com",
+      "scan_type": "custom",
+      "status": "completed",
+      "started_at": "2026-01-14T13:16:21.456Z",
+      "id": 5,
+      "created_at": "2026-01-14T13:16:21.456Z",
+      "completed_at": "2026-01-14T13:16:22.396Z"
+    },
+    {
+      "target_url": "https://example.com",
+      "scan_type": "custom",
+      "status": "completed",
+      "started_at": "2026-01-14T13:18:32.299Z",
+      "id": 6,
+      "created_at": "2026-01-14T13:18:32.368Z",
+      "completed_at": "2026-01-14T13:18:33.402Z"
+    },
+    {
+      "target_url": "https://example.com",
+      "scan_type": "custom",
+      "status": "completed",
+      "started_at": "2026-01-14T13:19:51.979Z",
+      "id": 7,
+      "created_at": "2026-01-14T13:19:51.979Z",
+      "completed_at": "2026-01-14T13:19:52.516Z"
+    },
+    {
+      "target_url": "https://example.com",
+      "scan_type": "custom",
+      "status": "completed",
+      "started_at": "2026-01-14T13:20:37.039Z",
+      "id": 8,
+      "created_at": "2026-01-14T13:20:37.039Z",
+      "completed_at": "2026-01-14T13:20:37.541Z"
+    },
+    {
+      "target_url": "https://example.com",
+      "scan_type": "custom",
+      "status": "completed",
+      "started_at": "2026-01-14T13:21:23.686Z",
+      "id": 9,
+      "created_at": "2026-01-14T13:21:23.686Z",
+      "completed_at": "2026-01-14T13:21:24.310Z"
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "scan_id": 1,
+      "title": "Missing Security Headers",
+      "description": "The server is missing 7 security header(s): X-Frame-Options, X-Content-Type-Options, X-XSS-Protection, Strict-Transport-Security, Content-Security-Policy, Referrer-Policy, Permissions-Policy",
+      "severity": "low",
+      "scanner_type": "custom",
+      "affected_url": "https://example.com",
+      "recommendation": "Add security headers to prevent clickjacking, MIME sniffing, and XSS attacks.",
+      "evidence": {
+        "missingHeaders": [
+          "X-Frame-Options",
+          "X-Content-Type-Options",
+          "X-XSS-Protection",
+          "Strict-Transport-Security",
+          "Content-Security-Policy",
+          "Referrer-Policy",
+          "Permissions-Policy"
+        ]
+      },
+      "id": 1,
+      "discovered_at": "2026-01-14T13:07:17.951Z"
+    },
+    {
+      "scan_id": 2,
+      "title": "Missing Security Headers",
+      "description": "The server is missing 7 security header(s): X-Frame-Options, X-Content-Type-Options, X-XSS-Protection, Strict-Transport-Security, Content-Security-Policy, Referrer-Policy, Permissions-Policy",
+      "severity": "low",
+      "scanner_type": "custom",
+      "affected_url": "https://example.com",
+      "recommendation": "Add security headers to prevent clickjacking, MIME sniffing, and XSS attacks.",
+      "evidence": {
+        "missingHeaders": [
+          "X-Frame-Options",
+          "X-Content-Type-Options",
+          "X-XSS-Protection",
+          "Strict-Transport-Security",
+          "Content-Security-Policy",
+          "Referrer-Policy",
+          "Permissions-Policy"
+        ]
+      },
+      "id": 2,
+      "discovered_at": "2026-01-14T13:09:06.158Z"
+    },
+    {
+      "scan_id": 3,
+      "title": "Missing Security Headers",
+      "description": "The server is missing 7 security header(s): X-Frame-Options, X-Content-Type-Options, X-XSS-Protection, Strict-Transport-Security, Content-Security-Policy, Referrer-Policy, Permissions-Policy",
+      "severity": "low",
+      "scanner_type": "custom",
+      "affected_url": "https://example.com",
+      "recommendation": "Add security headers to prevent clickjacking, MIME sniffing, and XSS attacks.",
+      "evidence": {
+        "missingHeaders": [
+          "X-Frame-Options",
+          "X-Content-Type-Options",
+          "X-XSS-Protection",
+          "Strict-Transport-Security",
+          "Content-Security-Policy",
+          "Referrer-Policy",
+          "Permissions-Policy"
+        ]
+      },
+      "id": 3,
+      "discovered_at": "2026-01-14T13:10:34.069Z"
+    },
+    {
+      "scan_id": 4,
+      "title": "Missing Security Headers",
+      "description": "The server is missing 7 security header(s): X-Frame-Options, X-Content-Type-Options, X-XSS-Protection, Strict-Transport-Security, Content-Security-Policy, Referrer-Policy, Permissions-Policy",
+      "severity": "low",
+      "scanner_type": "custom",
+      "affected_url": "https://example.com",
+      "recommendation": "Add security headers to prevent clickjacking, MIME sniffing, and XSS attacks.",
+      "evidence": {
+        "missingHeaders": [
+          "X-Frame-Options",
+          "X-Content-Type-Options",
+          "X-XSS-Protection",
+          "Strict-Transport-Security",
+          "Content-Security-Policy",
+          "Referrer-Policy",
+          "Permissions-Policy"
+        ]
+      },
+      "id": 4,
+      "discovered_at": "2026-01-14T13:12:37.820Z"
+    },
+    {
+      "scan_id": 5,
+      "title": "Missing Security Headers",
+      "description": "The server is missing 7 security header(s): X-Frame-Options, X-Content-Type-Options, X-XSS-Protection, Strict-Transport-Security, Content-Security-Policy, Referrer-Policy, Permissions-Policy",
+      "severity": "low",
+      "scanner_type": "custom",
+      "affected_url": "https://example.com",
+      "recommendation": "Add security headers to prevent clickjacking, MIME sniffing, and XSS attacks.",
+      "evidence": {
+        "missingHeaders": [
+          "X-Frame-Options",
+          "X-Content-Type-Options",
+          "X-XSS-Protection",
+          "Strict-Transport-Security",
+          "Content-Security-Policy",
+          "Referrer-Policy",
+          "Permissions-Policy"
+        ]
+      },
+      "id": 5,
+      "discovered_at": "2026-01-14T13:16:22.395Z"
+    },
+    {
+      "scan_id": 6,
+      "title": "Missing Security Headers",
+      "description": "The server is missing 7 security header(s): X-Frame-Options, X-Content-Type-Options, X-XSS-Protection, Strict-Transport-Security, Content-Security-Policy, Referrer-Policy, Permissions-Policy",
+      "severity": "low",
+      "scanner_type": "custom",
+      "affected_url": "https://example.com",
+      "recommendation": "Add security headers to prevent clickjacking, MIME sniffing, and XSS attacks.",
+      "evidence": {
+        "missingHeaders": [
+          "X-Frame-Options",
+          "X-Content-Type-Options",
+          "X-XSS-Protection",
+          "Strict-Transport-Security",
+          "Content-Security-Policy",
+          "Referrer-Policy",
+          "Permissions-Policy"
+        ]
+      },
+      "id": 6,
+      "discovered_at": "2026-01-14T13:18:33.400Z"
+    },
+    {
+      "scan_id": 7,
+      "title": "Missing Security Headers",
+      "description": "The server is missing 7 security header(s): X-Frame-Options, X-Content-Type-Options, X-XSS-Protection, Strict-Transport-Security, Content-Security-Policy, Referrer-Policy, Permissions-Policy",
+      "severity": "low",
+      "scanner_type": "custom",
+      "affected_url": "https://example.com",
+      "recommendation": "Add security headers to prevent clickjacking, MIME sniffing, and XSS attacks.",
+      "evidence": {
+        "missingHeaders": [
+          "X-Frame-Options",
+          "X-Content-Type-Options",
+          "X-XSS-Protection",
+          "Strict-Transport-Security",
+          "Content-Security-Policy",
+          "Referrer-Policy",
+          "Permissions-Policy"
+        ]
+      },
+      "id": 7,
+      "discovered_at": "2026-01-14T13:19:52.516Z"
+    },
+    {
+      "scan_id": 8,
+      "title": "Missing Security Headers",
+      "description": "The server is missing 7 security header(s): X-Frame-Options, X-Content-Type-Options, X-XSS-Protection, Strict-Transport-Security, Content-Security-Policy, Referrer-Policy, Permissions-Policy",
+      "severity": "low",
+      "scanner_type": "custom",
+      "affected_url": "https://example.com",
+      "recommendation": "Add security headers to prevent clickjacking, MIME sniffing, and XSS attacks.",
+      "evidence": {
+        "missingHeaders": [
+          "X-Frame-Options",
+          "X-Content-Type-Options",
+          "X-XSS-Protection",
+          "Strict-Transport-Security",
+          "Content-Security-Policy",
+          "Referrer-Policy",
+          "Permissions-Policy"
+        ]
+      },
+      "id": 8,
+      "discovered_at": "2026-01-14T13:20:37.540Z"
+    },
+    {
+      "scan_id": 9,
+      "title": "Missing Security Headers",
+      "description": "The server is missing 7 security header(s): X-Frame-Options, X-Content-Type-Options, X-XSS-Protection, Strict-Transport-Security, Content-Security-Policy, Referrer-Policy, Permissions-Policy",
+      "severity": "low",
+      "scanner_type": "custom",
+      "affected_url": "https://example.com",
+      "recommendation": "Add security headers to prevent clickjacking, MIME sniffing, and XSS attacks.",
+      "evidence": {
+        "missingHeaders": [
+          "X-Frame-Options",
+          "X-Content-Type-Options",
+          "X-XSS-Protection",
+          "Strict-Transport-Security",
+          "Content-Security-Policy",
+          "Referrer-Policy",
+          "Permissions-Policy"
+        ]
+      },
+      "id": 9,
+      "discovered_at": "2026-01-14T13:21:24.310Z"
+    }
+  ],
+  "nextScanId": 10,
+  "nextVulnId": 10
+}
